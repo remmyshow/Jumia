@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html class="no-js desktop" lang="en-NG">
+<head>
+    <script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"2e0dde5d40",applicationID:"97172052"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+                
+            <title>Order Food online | Express Home Delivery from Shops &amp; Restaurants nearby | Jumia Food NG</title>
+    
+            <meta name="description" content="Order online from the best restaurants and shops near you in Nigeria   ✔ Express Delivery to your home or office ✔ Easy Payment Options ✔ Need help placing an order? Please call: 018881108 | From 9am to 7pm | 7 days a week ✔ ORDER your products NOW!"/>
+    
+            <meta name="keywords" content="foodpanda, food"/>
+    
+            <meta name="robots" content="noindex,follow"/>
+    
+                        <meta name="format-detection" content="telephone=no"/>
+                                <meta name="mobile-web-app-capable" content="yes"/>
+                                <meta name="apple-mobile-web-app-capable" content="yes"/>
+                                <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+                                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                                <meta name="revisit-after" content="3 days"/>
+                                <meta name="msapplication-tilecolor" content="#da532c"/>
+                                <meta name="msapplication-tileimage" content="//africa-public.food.jumia.com/assets/production/ng/layout/themes/capricciosa_hellofood/images/en/mstile-144x144.png?v=1660717407"/>
+                                <meta name="msapplication-config" content="/browserconfig.xml"/>
+            
+            <link rel="alternate" href="android-app://com.jumiafood.android/foodpanda/?c=ng&amp;s=s&amp;la=4.8147518290619&amp;lo=7.0442100400766&amp;q=cold%20stone&amp;utm_source=google&amp;utm_medium=search&amp;utm_campaign=https%3A%2F%2Ffood.jumia.com.ng%2Frestaurants%3Fuser_search%3Dcold%2520stone&amp;utm_content=food.jumia.com.ng&amp;adjust_tracker=wqdu8i&amp;adjust_campaign=search&amp;adjust_adgroup=https%3A%2F%2Ffood.jumia.com.ng%2Frestaurants%3Fuser_search%3Dcold%2520stone&amp;adjust_creative=%26s%3Ds%26la%3D5.6897540791454%26lo%3D6.0616547914911%26q%3Dcold%2520stone"  />
+            <link rel="alternate" href="ios-app://1113993339/foodpanda/?c=ng&amp;s=s&amp;la=5.6897540791454&amp;lo=6.0616547914911&amp;q=cold%20stone&amp;utm_source=google&amp;utm_medium=search&amp;utm_campaign=https%3A%2F%2Ffood.jumia.com.ng%2Frestaurants%3Fuser_search%3Dcold%2520stone&amp;utm_content=food.jumia.com.ng&amp;adjust_tracker=qy87hh&amp;adjust_campaign=search&amp;adjust_adgroup=https%3A%2F%2Ffood.jumia.com.ng%2Frestaurants%3Fuser_search%3Dcold%2520stone&amp;adjust_creative=%26s%3Ds%26la%3D6.5340389680582%26lo%3D3.903375798463%26q%3Dcold%2520stone"  />
+            <link rel="apple-touch-icon" href="//africa-public.food.jumia.com/assets/production/ng/layout/themes/capricciosa_hellofood/images/en/apple-touch-icon-57x57.png?v=1660717407" sizes="57x57"  />
+            <link rel="apple-touch-icon" href="//africa-public.food.jumia.com/assets/production/ng/layout/themes/capricciosa_hellofood/images/en/apple-touch-icon-60x60.png?v=1660717407" sizes="60x60"  />
+            <link rel="apple-touch-icon" href="//africa-public.food.jumia.com/assets/production/ng/layout/themes/capricciosa_hellofood/images/en/apple-touch-icon-72x72.png?v=1660717407" sizes="72x72"  />
+            <link rel="apple-touch-icon" href="//africa-public.food.jumia.com/assets/production/ng/layout/themes/capricciosa_hellofood/images/en/apple-touch-icon-76x76.png?v=1660717407" sizes="76x76"  />
+            <link rel="apple-touch-icon" href="//africa-public.food.jumia.com/assets/production/ng/layout/themes/capricciosa_hellofood/images/en/apple-touch-icon-114x114.png?v=1660717407" sizes="114x114"  />
+            <link rel="apple-touch-icon" href="//africa-public.food.jumia.com/assets/production/ng/layout/themes/capricciosa_hellofood/images/en/apple-touch-icon-120x120.png?v=1660717407" sizes="120x120"  />
+            <link rel="apple-touch-icon" href="//africa-public.food.jumia.com/assets/production/ng/layout/themes/capricciosa_hellofood/images/en/apple-touch-icon-144x144.png?v=1660717407" sizes="144x144"  />
+            <link rel="apple-touch-icon" href="//africa-public.food.jumia.com/assets/production/ng/layout/themes/capricciosa_hellofood/images/en/apple-touch-icon-152x152.png?v=1660717407" sizes="152x152"  />
+            <link rel="apple-touch-icon" href="//africa-public.food.jumia.com/assets/production/ng/layout/themes/capricciosa_hellofood/images/en/apple-touch-icon-180x180.png?v=1660717407" sizes="180x180"  />
+            <link rel="apple-touch-icon-precomposed" href="//africa-public.food.jumia.com/assets/production/ng/layout/themes/capricciosa_hellofood/images/en/apple-touch-icon-precomposed.png?v=1660717407"  />
+            <link rel="icon" href="//africa-public.food.jumia.com/assets/production/ng/layout/themes/capricciosa_hellofood/images/en/favicon-32x32.png?v=1660717407" sizes="32x32"  />
+            <link rel="icon" href="//africa-public.food.jumia.com/assets/production/ng/layout/themes/capricciosa_hellofood/images/en/favicon-192x192.png?v=1660717407" sizes="192x192"  />
+            <link rel="icon" href="//africa-public.food.jumia.com/assets/production/ng/layout/themes/capricciosa_hellofood/images/en/favicon-96x96.png?v=1660717407" sizes="96x96"  />
+            <link rel="icon" href="//africa-public.food.jumia.com/assets/production/ng/layout/themes/capricciosa_hellofood/images/en/favicon-16x16.png?v=1660717407" sizes="16x16"  />
+            <link rel="manifest" href="/manifest.json"  />
+            <link rel="shortcut icon" href="//africa-public.food.jumia.com/assets/production/ng/layout/themes/capricciosa_hellofood/images/en/favicon.ico?v=1660717407"  />
+            <link rel="mask-icon" href="//africa-public.food.jumia.com/assets/production/ng/layout/themes/capricciosa_hellofood/images/en/safari-pinned-tab.svg?v=1660717407" color="#f68b1e"  />
+            <link rel="alternate" href="https://food.jumia.com.ng/restaurants" hreflang="en-NG"  />
+            <link rel="alternate" href="https://food.jumia.com.ng/vi/restaurants" hreflang="vi-NG"  />
+            <link rel="canonical" href="https://food.jumia.com.ng/restaurants"  />
+    
+                        <meta content="https://food.jumia.com.ng/restaurants?user_search=cold stone" property="og:url"/>
+                                <meta content="Jumia Food" property="og:site_name"/>
+                                <meta content="https://food.jumia.com.ng/restaurants" property="og:canonical"/>
+                      <link rel="stylesheet" href="https://africa-public.food.jumia.com/cdn/production/shop-new/css/styles-5c59f24d.css" media="all"/>
+  <link rel="stylesheet" href="https://africa-public.food.jumia.com/cdn/production/font-awesome/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,700" rel="stylesheet">
+                
+        
+    
+    
+    
+        
+    <script type="text/javascript">
+        window.API_BASE_URL = 'https://api.food.jumia.com.ng/api/v6';
+        window.CURRENCY_INFO = {"symbol":"\u20a6","position":"left","decimals":2,"decimal_sep":".","thousands_sep":",","symbol_spaces":0,"currency_symbol_iso":"NGN"};
+        window.SMART_WEBVIEW_PREFIX = '';
+        window.HTTP_HOST_SCHEMA = 'https://food.jumia.com.ng';
+        window.GOOGLE_ADS_NETWORK_CODE = '21834539417';
+        window.POPUPS_ENABLED = 1;
+        window.GEOLOCATION_ENABLED = 1;
+        window.CACHEBUSTER_SUFFIX = '1596116892';
+
+                                window.BRAND_NAME = 'jumiafood';
+            window.LIST_PATH = '/restaurants'
+            window.DETAIL_PATH = '/restaurant'
+            window.IS_WHITELABEL = false;
+        
+    </script>
+
+    
+                    
+    
+    <script>
+        var dataLayer = [{"area_id":"NA","area_name":"NA","city_id":"NA","city_name":"NA","lat":"NA","lng":"NA","country_id":"NG","app_version":"production|master|f426933jf","ga_code":"UA-00000000-0","ga_domain":"food.jumia.com.ng","language":"en_NG","visitor_id":"2a5584ac293028f6445fadea7f6931d5","landing_page":"\/restaurants?user_search=cold%20stone","visitor_utm_source":"","visitor_utm_campaign":"","visitor_utm_content":"","visitor_utm_medium":"","visitor_utm_term":"","visitor_referer":"Others","visitor_source":"https:\/\/www.jumia.com.ng\/","ab_group":"a","platform":"pc","currency":"NGN","page_type":"Restaurants Listing Page","newsletter_id":null,"qty_displayed_restaurants":2,"qty_sponsored_displayed_restaurants":0,"qty_preorder_displayed_restaurants":0,"qty_open_displayed_restaurants":0,"qty_new_displayed_restaurants":0,"qty_deals_displayed_restaurants":0,"qty_closed_displayed_restaurants":1,"qty_cuisines_displayed":2,"search_box":"cold stone","sorting_used":"NA","source":"frontend","brand":"jumiafood","customer_logged":0,"customer_id":"","customer_status":"NA","customer_control":0,"customer_lastname":"","customer_name":"","customer_email":"","customer_vendor_id_list":"","customer_last_date":"NA","customer_first_date":"NA","customer_acquisition_voucher":"false"}];
+
+        window.$trackingConfig = {
+            gtmActive: 1,
+            gaActive: 1
+        };
+
+    </script>
+
+            <!-- Google Tag Manager -->
+        <script>
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-T3KQC9');
+        </script>
+        <!-- End Google Tag Manager -->
+                <script async src='/cdn-cgi/bm/cv/669835187/api.js'></script></head>
+<body class="  no-foodpanda ng " >
+                                    <noscript>
+        <iframe
+            src="//www.googletagmanager.com/ns.html?id=GTM-T3KQC9"
+            height="0"
+            width="0"
+            style="display:none;visibility:hidden"
+        ></iframe>
+    </noscript>
+            <section id="jf">
+        <div id="header-promo-container"></div>
+                      
+
+  <nav id="jf-navbar" class="navbar is-transparent header-navbar sticky has-shadow">
+    <div class="container">
+      <div class="navbar-brand">
+        <div class="navbar-burger burger" data-target="header-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <a class="navbar-item" href="/">
+            <img alt="Logo" class="is-hidden-touch" src="//africa-public.food.jumia.com/assets/production/ng/layout/themes/capricciosa_hellofood/images/en/jumiafood-logo.png?v=1660717407" />
+        <img class="is-hidden-desktop" src="/images/jumia-food-mobile.svg?v=1596116892" alt="Logo" />
+    </a>
+      </div>
+      <div id="header-menu" class="navbar-menu has-text-centered-touch">
+        <div class="navbar-end mhl-mobile">
+                                                <a class="navbar-item mhxs is-hidden-desktop" href="https://pay.jumia.com.ng/services/jumia-prime" target="_blank">
+    <div class="dir-row fvh-ctr">
+      <img class="icon-w-16 mrs" src="/images/prime-icon.svg?v=1596116892"/>
+      <span class="is-uppercase">Jumia Prime</span>
+    </div>
+  </a>
+                                              <div class="navbar-item has-dropdown is-hoverable mhxs">
+        <a class="navbar-item nav-lang-switch" href="#">
+            <div class="fvh-ctr">
+                <span class="is-uppercase mrs">English</span>
+                <i class="fa fa-sm fa-chevron-down"></i>
+            </div>
+        </a>
+        <div class="navbar-dropdown is-hidden-touch nav-lang-switch-dropdown">
+                                                                            <a class="navbar-item  is-active" href="/restaurants?user_search=cold%20stone">English</a>
+                                                                            <a class="navbar-item " href="/vi/restaurants?user_search=cold+stone&amp;switch_language=1">Pidgin</a>
+                    </div>
+    </div>
+
+                      <a class="navbar-item mhxs is-hidden-desktop" href="/restaurants">
+    <div class="dir-col is-inline-block-touch">
+        <span class="is-uppercase">Vendors</span>
+    </div>
+</a>
+                      <a class="navbar-item mhxs" href="/contents/contact.htm">
+    <div class="dir-col is-inline-block-touch">
+        <span class="is-uppercase">Help</span>
+    </div>
+</a>
+                                              <div class="navbar-item">
+                <a class="button is-primary is-small is-size-5 is-fullwidth-touch has-text-weight-bold is-uppercase"
+                                            id="myJumiaLogin"
+                                       data-card-class="small"
+                >
+                    Login / Sign Up
+                </a>
+            </div>
+                    </div>
+      </div>
+    </div>
+  </nav>
+                            <main >
+                    
+                                                                                            
+
+
+                    
+    
+    <section class="events-messages">
+
+        
+            </section>
+    
+    
+    
+    
+    
+    <script>
+        window.homeURL = "https:\/\/food.jumia.com.ng\/";
+        window.vendorsListURL = "\/restaurants";
+        window.activeFilterKeysFromBackend = ["user_search","free_delivery","has_discount","is_open","onlinepayment","foodcharacteristics","cuisines","_token"]
+        window.filterSearchConfigs = {"user_search":"cold stone","sort":[],"filters":{"cuisines":[],"foodcharacteristics":[],"budget":[],"quick":{"free_delivery":null,"pickup":null,"preorder":null,"accept_voucher":null,"has_discount":null,"onlinepayment":null,"delivery":null,"is_open":false,"express_delivery":false}}}
+        window.isVendorGroupFavoritesEnabled = true
+        window.isVendorGroupDeliveryTimeEnabled = true
+        window.vendorGroupDeliveryTimeThreshold = 35
+        window.deliveryTimeRange = "10"
+        window.isCustomerLoggedIn = false
+    </script>
+
+                        <section id="restaurant-list"
+             data-location=""
+             data-language-id="1"
+             data-t-deliverto="delivering to"
+             data-area-name="(No location Selected)"
+             data-customer-area-id=""
+             data-customer-city-id=""
+             data-customer-address=""
+             data-is-seo-page=""
+             data-city-id=""
+             data-seo-page-header=""
+             data-seo-page-sub-header=""
+             data-empty-restaurants-image-path="/images/restaurants-empty.svg"
+             data-t-under25="Delivery under 25 minutes"
+             data-t-more-restaurants="More Vendors"
+             data-t-no-restaurants="sorry no vendors found"             data-t-search-placeholder="Search"
+             data-t-filter-placeholder="Filter"
+             data-t-sort-placeholder="Sort"
+             data-t-reset="Reset"
+             data-t-is-new="New"
+             data-t-is-ad="Ad"
+             data-t-is-closed="Closed"
+             data-t-is-pre-order="Pre-Order"
+             data-t-characteristics="Characteristics"
+             data-t-cuisines="Cuisines"
+             data-t-button-change-location="SEARCH"
+             data-t-select-city="Select your city"
+             data-t-select-area="Select your area"
+             data-t-top-cities="Popular Cities"
+             data-t-more-cities="More Cities"
+             data-t-time-min="min"
+             data-t-budget="budget"
+             data-t-filter-by="Filter By"
+             data-t-quickfilters="Quick Filters"
+             data-t-empty-results-due-to-search-title="Coming to your neighborhood soon!"
+             data-t-empty-results-due-to-search-subtitle="We don&#039;t have vendors to present in your area yet"
+             data-t-empty-results-due-to-search-filters-change-criteria-click="Please change your filter criteria. Click "
+             data-t-empty-results-due-to-search-filters-here="here "
+             data-t-empty-results-due-to-search-filters-to-reset="to reset"
+             data-t-filter-free-delivery="Free Delivery"
+             data-t-filter-pre-order="Pre-Order"
+             data-t-filter-pickup="Pickup"
+             data-t-filter-discounts="Has Discounts"
+             data-t-filter-accept-vouchers="Accept Vouchers"
+             data-t-filter-online-payment="Accept Online Payments"
+             data-t-filter-delivery="Delivery"
+             data-t-filter-is-open="Is Open"
+             data-t-filter-express-delivery="Has express delivery"
+             data-t-vendor-group-delivery-time-title="Delivers in under 35 minutes"
+             data-t-vendor-group-others-title="More vendors"
+             data-t-vendor-group-favorites-title="Favorites"
+             data-change-location-form-action="/location/select-city-area"
+             data-sort-options="{&quot;default&quot;:&quot;Popularity&quot;,&quot;rating_desc&quot;:&quot;Ratings&quot;,&quot;minimum_order_amount_asc&quot;:&quot;Minimum order value&quot;,&quot;minimum_delivery_fee_asc&quot;:&quot;Delivery fee&quot;,&quot;minimum_delivery_time_asc&quot;:&quot;Fastest delivery&quot;}"
+             data-chain-ids="[]"
+             data-is-age-gate-enabled=""
+                              data-last-orders-addresses="[]"
+                 data-country-info="{&quot;name&quot;:&quot;Nigeria&quot;,&quot;code&quot;:&quot;ng&quot;}"
+                 data-default-location="{&quot;lat&quot;:6.4568779999999997,&quot;lng&quot;:3.3877989999999998}"
+                         ></section>
+    
+    
+            <script defer src="https://maps.googleapis.com/maps/api/js?region=ng&amp;client=gme-silveroakinternet&amp;channel=food&amp;signature=zJGtPZDf-jQbDW9MMd9QV4vYDoQ%3D&amp;libraries=places%2Cgeometry">
+            <!-- -->
+        </script>
+                </main>
+        
+                    <div class="is-simple-footer">
+        <div class="content pas pbm">
+  <div class="container is-flex fl-wrap just-space-between">
+    <div class="simple-footer-cms phs-touch pts">
+      <a target="_blank" href="/contents/terms-and-conditions.htm">
+        Terms and Conditions
+      </a>
+      &nbsp;&middot;&nbsp;
+      <a target="_blank" href="/contents/privacy.htm">
+        Privacy Policy
+      </a>
+    </div>
+    <span class="simple-footer-trademark phs-touch pts">
+      © Copyright 2022 Jumia Food is a registered trademark
+    </span>
+  </div>
+</div>    </div>
+                <script>window.TRANSLATIONS = {"jumiafood.shop.location.choose_another_location":"Choose another location","jumiafood.shop.location.choose_on_map":"Choose on map","jumiafood.shop.location.dont_deliver_text":"Sorry, we don't deliver there... yet! Jumia Food is expanding delivery locations, so stay tuned!","jumiafood.shop.location.dont_deliver_title":"We don\u2019t deliver at this address","jumiafood.shop.location.enter_delivery_address":"Enter your delivery address","jumiafood.shop.location.find_food_button":"Show results","jumiafood.shop.location.find_food_button_search":"SEARCH","jumiafood.shop.location.not_found":"Not found","jumiafood.shop.location.see_where_we_deliver":"See where we deliver","jumiafood.shop.location.show_results":"Show results","jumiafood.shop.location.wrong_country.button_accept":"Yes, change country","jumiafood.shop.location.wrong_country.button_reject":"No, keep country","jumiafood.shop.location.wrong_country.text":"It seems that you are at %client-country% and your account is defined to %api-country%. If you don\u2019t change it, your delivery location will not be valid.","jumiafood.shop.location.wrong_country.title":"Are you in a different country?","jumiafood.shop.location.delivering_location":"Delivering Location","jumiafood.shop.location.choose_your_location":"You can move the map to choose your location","jumiafood.shop.location.choose_this_location":"CHOOSE THIS LOCATION","jumiafood.shop.location.we_dont_deliver_here":"Sorry, we don't deliver here","jumiafood.shop.location.button.submit":"Submit","jumiafood.shop.vendor.listing.customised_group.title":"Happy Hour Deal","jumiafood.shop.vendor.listing.deliver_to":"delivering to","jumiafood.shop.vendor.listing.empty_results_due_filter_search_change_criteria_click":"Please change your filter criteria. Click","jumiafood.shop.vendor.listing.empty_results_due_filter_search_here":"here","jumiafood.shop.vendor.listing.empty_results_due_filter_search_to_reset":"to reset","jumiafood.shop.vendor.listing.empty_results_due_to_search_subtitle":"We don't have vendors to present in your area yet","jumiafood.shop.vendor.listing.empty_results_due_to_search_title":"Coming to your neighborhood soon!","jumiafood.shop.vendor.listing.filter":"Filter","jumiafood.shop.vendor.listing.group_delivery_time_title":"Delivers in under {delivery_threshold} minutes","jumiafood.shop.vendor.listing.group_recommendation_title":"Recommended vendors","jumiafood.shop.vendor.listing.group_favorites_title":"Favorites","jumiafood.shop.vendor.listing.group_others_title":"More vendors","jumiafood.shop.vendor.listing.no_location_selected":"(No location Selected)","jumiafood.shop.vendor.listing.sort":"Sort","jumiafood.shop.breadcrumbs.restaurants":"Vendors","jumiafood.shop.breadcrumbs.home":"Home","jumiafood.shop.age_gate_popup_message":"In order to continue, please confirm that you are above 18 years of age.","jumiafood.shop.age_gate_popup_accept_condition_label":"Yes, I'm 18 years or above. Let's party.","jumiafood.shop.age_gate_popup_accept_button_text":"Confirm","jumiafood.shop.age_gate_popup_reject_text":"No, I'm less than 18 years. Please take me back to Jumia Food.","jumiafood.shop.age_gate_acceptance_required":"Please confirm your age.","jumiafood.shop.age_gate_disclaimer_age":"Do not forward this to people under the age of 18.","jumiafood.shop.age_gate_disclaimer_harmful":"Excessive alcohol consumption is harmful to your health.","shop.form.button.submit":"Submit","jumiafood.shop.vendor.listing.time.min":"min","jumiafood.shop.vendor.listing.time.hours":"hours","jumiafood.shop.vendor.listing.time.days":"days","jumiafood.shop.vendor.listing.vendor.ad":"Ad","jumiafood.shop.vendor.listing.vendor.closed":"Closed","jumiafood.shop.vendor.listing.vendor.new":"New","jumiafood.shop.vendor.listing.vendor.preorder":"Pre-Order","jumiafood.shop.location.select_city":"Select your city","jumiafood.shop.vendor.listing.search":"Search","shop.location.more_cities.header":"More Cities","jumiafood.shop.location.select_area":"Select your area","shop.location.top_cities.header":"Popular Cities","jumiafood.shop.location.tell_us_where_you_are":"Tell us where you are","jumiafood.shop.select_location":"Select Location","jumiafood.shop.location.choose_location":"Choose location","jumiafood.shop.location.view_restaurants_near_you":"View vendors near you","jumiafood.shop.vendor.detail.location.separator.or":"Or"};</script>
+
+                    
+            <script defer type="text/javascript" src="https://africa-public.food.jumia.com/cdn/production/shop-new/js/vendors-app-9374ea3d.js"></script>
+    <script defer type="text/javascript" src="https://africa-public.food.jumia.com/cdn/production/shop-new/js/app-06c42921.js"></script>
+        <script>
+        // disable bfcache navigations (issues on some safari iOS devices)
+        window.onpageshow = function(event) {
+            if(event.persisted) {
+                window.location.reload()
+            }
+        }
+    </script>
+        <div id="modal-ajax" class="modal has-tabs">
+            <div class="modal-background"></div>
+            <div class="modal-card fh-ctr wb-word" data-form-post-ajax></div>
+        </div>
+    </section>
+
+                
+    
+                <div
+                id="cookie-notice-vue"
+                data-cookie-name="FD_cookie_notice"
+                data-cookie-expires="315360000"
+                data-cookie-notice-message="Jumia Food uses cookie files in order to improve your online experience and for analytics. You can disable cookies in your browser settings at any moment."
+                data-cookie-notice-link="/contents/privacy.htm#cookies"
+                data-cookie-notice-link-text="Cookie Privacy"
+        ></div>
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"2e0dde5d40","applicationID":"97172052","transactionName":"Z1RTbUoECEBWARJeC14eckxLEQleGAQJWABAUF9dWUsVW1gSSEEBXlVeSxYGCV1DEAlbCFVDH09dCwJcRT0KXhdEWF9eAhMDXVMNFEQlU0VYVlY=","queueTime":1,"applicationTime":154,"atts":"SxNQGwIeG04=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+<script>(function(){window['__CF$cv$params']={r:'73c30aa15c52d418',m:'dSh2mX8_ijojjjl.8TE36iCiUbcE0GUiz6hytGVkv3M-1660745933-0-AZ6UhVHu2/vMcqRDIgmfZzKz5mHu2MmgVz7gVslSbOK+X0jiwH48qwz+y6E9PR1poLHUmDftRyNUPJJbgmZqNU0rUHBWsJpr/HYvh1iPVcomQTxToLGhiDhK14ZsYAh6Z+EQumhAFZw9lewrkZGei8cJnomyCd79GtDaDe/zffzm',s:[0xa1b04733a6,0x797bf7d1ab],}})();</script></body>
+</html>

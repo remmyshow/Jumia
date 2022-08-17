@@ -1243,8 +1243,8 @@ nav ul li a {
 }
 
 .footer-container{
-    background-color: rgb(20, 19, 19);
-    /* padding-bottom: 4rem; */
+    background-color: rgb(219, 219, 219);
+    padding-bottom: 6rem;
 }
 
 
@@ -1258,7 +1258,7 @@ nav ul li a {
 .footer {
     width: 80%;
     height: 40vh;
-    background-color: rgb(20, 19, 19,);
+    background-color: rgb(139, 127, 127);
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -1269,4 +1269,42 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     margin-right: 4rem;
+}
+
+.footer-heading footer-1{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    margin-right: 4rem;
+    line-gap-override: none;
+    line-height: normal;
+}
+
+.logos {
+    position:relative;
+    bottom: 150px;
+}
+.footer-email-form{
+   background-color: #282828;
+    color: #fff;
+    width: 100rem;
+    
+}
+
+/* .playstore {
+    margin-bottom: 100px;
+} */
+
+.download{
+    position: absolute;
+    margin-top: 210px;
+    margin-left:190px;
+    color: #fff;
+    display: flex;
+}
+
+.playstore{
+    position:absolute;
+    margin-top: 270px;
+    margin-left: 190px;
 }
